@@ -9,10 +9,10 @@ if [[ ! -d "$OUTPUT_DIR" ]]; then
   mkdir -p "$OUTPUT_DIR"
 fi
 
-echo "[INFO] Menjalankan mirror crawl ke $TARGET_URL"
-echo "[INFO] Output disimpan di $OUTPUT_DIR"
+echo "[INFO] Running mirror crawl on $TARGET_URL"
+echo "[INFO] Output is saved in $OUTPUT_DIR"
 
-echo "[INFO] Catatan: gunakan hanya pada target yang Anda miliki izin untuk diuji"
+echo "[INFO] Note: use only on targets you have permission to test"
 
 wget \
   --mirror \
@@ -26,4 +26,4 @@ wget \
   --directory-prefix="$OUTPUT_DIR" \
   "$TARGET_URL"
 
-echo "[INFO] Selesai. Hasil tersimpan di $OUTPUT_DIR"
+echo "[INFO] Done. Results saved in $OUTPUT_DIR"
