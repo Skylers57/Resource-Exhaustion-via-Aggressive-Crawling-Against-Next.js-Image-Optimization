@@ -62,4 +62,4 @@ chmod +x poc.sh
 - Monitor abnormal request patterns and resource spikes in real time
 
 ## Notes
-This PoC is intended only for authorized security testing and educational use in controlled environments.
+This PoC is intended only for authorized security testing.
