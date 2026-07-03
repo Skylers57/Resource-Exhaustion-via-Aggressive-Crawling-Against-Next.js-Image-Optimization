@@ -18,7 +18,7 @@ A web server can be driven into a degraded state when aggressive crawling target
 - Web server
 - Next.js image optimization pipeline
 - Image delivery and caching layer
-- affected on the path /_next/images
+- affected on the path /_next/images/
 
 ## Technical Details
 The issue is triggered when a crawler or automated script traverses many content pages that reference multiple images. Each image request may require on-demand optimization, which is memory intensive and CPU intensive. If the cache is not sufficient to absorb the request burst, the server must perform expensive processing for a large number of assets in a short period. This behavior can degrade service quality and increase resource consumption significantly.
