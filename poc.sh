@@ -21,8 +21,6 @@ wget \
   --convert-links \
   --no-parent \
   --user-agent="$USER_AGENT" \
-  --wait=2 \
-  --limit-rate=200k \
   --directory-prefix="$OUTPUT_DIR" \
   "$TARGET_URL"
 
