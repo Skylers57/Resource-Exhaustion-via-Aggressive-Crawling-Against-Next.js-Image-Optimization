@@ -46,7 +46,7 @@ If the target site contains many news articles or content pages, each page may i
 1. Select a target site that contains many image-heavy pages.
 2. Run the PoC command or a custom crawler against the target.
 3. Monitor CPU usage, memory consumption, and server logs during execution.
-4. Observe whether the server shows increased latency, slower rendering, or higher resource usage as image optimization is triggered repeatedly.
+4. Observe whether the server shows increased latency, slower rendering, higher resource usage when image optimization is triggered repeatedly, or if the web server goes down.
 
 ## Automated Execution
 ```bash
