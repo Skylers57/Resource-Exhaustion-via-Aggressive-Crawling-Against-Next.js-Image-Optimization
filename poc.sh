@@ -1,0 +1,29 @@
+#!/bin/bash
+set -euo pipefail
+
+TARGET_URL="${1:-https://target-web.com/}"
+OUTPUT_DIR="${2:-./output}"
+USER_AGENT="${3:-Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0}"
+
+if [[ ! -d "$OUTPUT_DIR" ]]; then
+  mkdir -p "$OUTPUT_DIR"
+fi
+
+echo "[INFO] Running mirror crawl on $TARGET_URL"
+echo "[INFO] Output is saved in $OUTPUT_DIR"
+
+echo "[INFO] Note: use only on targets you have permission to test"
+
+wget \
+  --mirror \
+  --page-requisites \
+  --adjust-extension \
+  --convert-links \
+  --no-parent \
+  --wait=2 \
+  --limit-rate=200k \
+  --user-agent="$USER_AGENT" \
+  --directory-prefix="$OUTPUT_DIR" \
+  "$TARGET_URL"
+
+echo "[INFO] Done. Results saved in $OUTPUT_DIR"
